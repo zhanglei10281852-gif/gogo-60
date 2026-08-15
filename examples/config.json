@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "dataDir": "./caveloop-data",
+  "defaults": {
+    "lengthUnit": "m",
+    "angleUnit": "deg",
+    "declination": 0.0
+  },
+  "tolerances": {
+    "backsightAzimuthDeg": 2.0,
+    "backsightInclinationDeg": 2.0,
+    "backsightDistanceMeters": 0.1,
+    "backsightDistanceRatio": 0.02,
+    "loopClosureMeters": 0.5,
+    "loopClosurePpm": 20000,
+    "verticalClosureMeters": 0.3
+  },
+  "adjustment": {
+    "enabled": true,
+    "maxPasses": 24,
+    "convergenceMeters": 0.0005,
+    "minShotWeightMeters": 0.05,
+    "adjustVertical": true
+  },
+  "blunders": {
+    "enabled": true,
+    "reversedWindowDeg": 12.0,
+    "lengthOutlierSigma": 3.0,
+    "lengthOutlierMinimumShots": 6,
+    "transposeImprovementRatio": 0.6,
+    "maxCandidatesPerLoop": 32
+  },
+  "output": {
+    "format": "text",
+    "lengthPrecision": 3,
+    "anglePrecision": 2
+  }
+}

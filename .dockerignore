@@ -1,0 +1,12 @@
+.cache/
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+RELEASE_REPORT.md
+caveloop-data/
+examples/
+**/*_test.go
+**/*.exe
+**/*.log

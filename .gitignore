@@ -1,0 +1,16 @@
+# Local build, cache and smoke test artefacts.
+.cache/
+
+# Default store directory created by the CLI when no -data flag is given.
+caveloop-data/
+
+# Compiled binaries.
+caveloop
+caveloop.exe
+*.exe
+*.test
+
+# Editor and OS noise.
+*.swp
+.DS_Store
+Thumbs.db

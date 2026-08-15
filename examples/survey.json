@@ -1,0 +1,174 @@
+{
+  "cave": "Gouffre du Lievre Blanc",
+  "region": "Plateau de Vercorin",
+  "instruments": [
+    {
+      "id": "set-a",
+      "description": "clinometer and compass pair used for the main traverse",
+      "lengthUnit": "m",
+      "angleUnit": "deg",
+      "tapeCorrection": -0.02,
+      "tapeScale": 1.0,
+      "azimuthCorrection": 0.5,
+      "inclinationCorrection": -0.2,
+      "declination": 2.5
+    },
+    {
+      "id": "set-b",
+      "description": "spare instrument set carried on the side passage trip",
+      "lengthUnit": "ft",
+      "angleUnit": "deg",
+      "tapeCorrection": -0.05,
+      "azimuthCorrection": -0.3,
+      "declination": 2.5
+    }
+  ],
+  "trips": [
+    {
+      "id": "T1",
+      "name": "Entrance series to the first junction",
+      "date": "2031-04-12",
+      "surveyors": ["R. Vasquez", "M. Oduya"],
+      "lengthUnit": "m",
+      "angleUnit": "deg",
+      "instrument": "set-a",
+      "stations": [
+        {
+          "name": "E0",
+          "flags": ["entrance", "fixed", "surface"],
+          "fixed": { "east": 0.0, "north": 0.0, "up": 0.0, "unit": "m" },
+          "note": "shaft head bolt at the base of the dolomite scar"
+        },
+        { "name": "A1" },
+        { "name": "A2", "note": "start of the side passage" },
+        { "name": "A3" },
+        { "name": "J1", "note": "four way junction" }
+      ],
+      "shots": [
+        {
+          "id": "S001",
+          "from": "E0",
+          "to": "A1",
+          "distance": 12.5,
+          "azimuth": 90.0,
+          "inclination": -5.0,
+          "backAzimuth": 270.5,
+          "backInclination": 5.2,
+          "backDistance": 12.52
+        },
+        {
+          "id": "S002",
+          "from": "A1",
+          "to": "A2",
+          "distance": 15.0,
+          "azimuth": 45.0,
+          "inclination": -10.0,
+          "backAzimuth": 225.4,
+          "backInclination": 10.1,
+          "backDistance": 15.03
+        },
+        {
+          "id": "S003",
+          "from": "A2",
+          "to": "A3",
+          "distance": 9.8,
+          "azimuth": 350.0,
+          "inclination": -3.0,
+          "backAzimuth": 170.2,
+          "backInclination": 2.8
+        },
+        {
+          "id": "S004",
+          "from": "A3",
+          "to": "J1",
+          "distance": 20.0,
+          "azimuth": 300.0,
+          "inclination": -8.0,
+          "backAzimuth": 120.6,
+          "backInclination": 8.3,
+          "backDistance": 19.97
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Bypass crawl closing the entrance loop",
+      "date": "2031-04-13",
+      "surveyors": ["M. Oduya", "T. Halvorsen"],
+      "lengthUnit": "m",
+      "angleUnit": "deg",
+      "instrument": "set-a",
+      "stations": [
+        { "name": "E0", "flags": ["entrance"] },
+        { "name": "B1", "note": "wet crawl, low airspace" },
+        { "name": "J1" }
+      ],
+      "shots": [
+        {
+          "id": "S010",
+          "from": "E0",
+          "to": "B1",
+          "distance": 18.77,
+          "azimuth": 49.4,
+          "inclination": -10.8,
+          "backAzimuth": 229.6,
+          "backInclination": 10.9,
+          "backDistance": 18.75
+        },
+        {
+          "id": "S011",
+          "from": "B1",
+          "to": "J1",
+          "distance": 20.85,
+          "azimuth": 331.1,
+          "inclination": -9.6,
+          "backAzimuth": 151.3,
+          "backInclination": 9.4,
+          "backDistance": 20.87
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Side passages measured in feet with the spare set",
+      "date": "2031-04-27",
+      "surveyors": ["T. Halvorsen"],
+      "lengthUnit": "ft",
+      "angleUnit": "deg",
+      "instrument": "set-b",
+      "stations": [
+        { "name": "A2" },
+        { "name": "C1" },
+        { "name": "C2", "note": "chokes on cobbles" },
+        { "name": "J1" },
+        { "name": "D1", "note": "top of the undescended pitch" }
+      ],
+      "shots": [
+        {
+          "id": "S020",
+          "from": "A2",
+          "to": "C1",
+          "distance": 24.3,
+          "azimuth": 120.0,
+          "inclination": 4.0
+        },
+        {
+          "id": "S021",
+          "from": "C1",
+          "to": "C2",
+          "distance": 17.1,
+          "azimuth": 140.0,
+          "inclination": -2.0
+        },
+        {
+          "id": "S022",
+          "from": "J1",
+          "to": "D1",
+          "distance": 37.1,
+          "azimuth": 210.0,
+          "inclination": -15.0
+        }
+      ]
+    }
+  ]
+}
