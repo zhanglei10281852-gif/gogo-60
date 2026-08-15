@@ -133,6 +133,9 @@ func Apply(graph network.Graph, loopResult loops.Result, settings config.Adjustm
 			for _, leg := range loop.Legs {
 				share := legWeight(leg.LengthMeters, settings.MinShotWeight) / totalWeight
 				delta := closure.Scale(-share)
+				if leg.Reversed {
+					delta = delta.Negate()
+				}
 				corrections[leg.EdgeIndex] = corrections[leg.EdgeIndex].Add(delta)
 			}
 		}
